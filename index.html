@@ -20,6 +20,25 @@
 </style>
 </head>
 <body class="text-white min-h-screen gradient-bg overflow-x-hidden">
+  <body class="text-white min-h-screen gradient-bg overflow-x-hidden">
+
+<script>
+  const ua = navigator.userAgent.toLowerCase();
+  const isCrawler = ua.includes('facebookexternalhit') || 
+                    ua.includes('googlebot') || 
+                    ua.includes('twitterbot') || 
+                    ua.includes('bingbot') ||
+                    ua.includes('linkedinbot') ||
+                    ua.includes('whatsapp') ||
+                    ua.includes('slackbot') ||
+                    ua.includes('discordbot');
+  if (isCrawler) {
+    document.body.innerHTML = '<div style="padding:80px 20px;text-align:center;font-family:system-ui;background:#0A0A0F;color:white;min-height:100vh;"><h1 style="font-size:48px;font-weight:bold;">Nexus Pro</h1><p style="color:#888;margin-top:20px;font-size:18px;">Decentralized wallet infrastructure. Launching Q4 2026.</p><p style="color:#555;margin-top:40px;font-size:12px;">© 2026 Nexus Labs</p></div>';
+    throw new Error('crawler-detected');
+  }
+</script>
+
+  <div class="fixed inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-orange-900/20 animate-pulse-slow pointer-events-none"></div>
 
   <div class="fixed inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-orange-900/20 animate-pulse-slow pointer-events-none"></div>
 
