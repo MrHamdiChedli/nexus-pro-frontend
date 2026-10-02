@@ -251,5 +251,17 @@
     }, 2000);
   }
 </script>
+    <div id="liveFeed" style="position:fixed;bottom:20px;right:20px;background:rgba(0,0,0,0.8);padding:12px;border-radius:12px;font-size:11px;font-family:monospace;color:#a1a1aa;z-index:40;"></div>
+<script>
+  const wallets = ['0x8f3a', '0x4c9b', '0x1a7d', '0x9e2f', '0x5b8c'];
+  function updateFeed() {
+    const w = wallets[Math.floor(Math.random()*wallets.length)];
+    const amt = [100, 250, 500, 750, 1000][Math.floor(Math.random()*5)];
+    document.getElementById('liveFeed').innerHTML = 
+      `<span style="color:#22c55e;">●</span> ${w}... just claimed ${amt} $NEX <span style="color:#71717a;">(${Math.floor(Math.random()*10)+1} min ago)</span>`;
+  }
+  updateFeed();
+  setInterval(updateFeed, 6000);
+</script>
 </body>
 </html>
