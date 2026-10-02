@@ -1,0 +1,28 @@
+{
+  "name": "nexus-pro-frontend",
+  "version": "1.0.0",
+  "description": "Nexus Pro - Wallet Synchronization",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrHamdiChedli/nexus-pro-frontend"
+  },
+  "keywords": [
+    "wallet",
+    "crypto",
+    "nexus"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
